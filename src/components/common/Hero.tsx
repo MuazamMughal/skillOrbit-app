@@ -45,7 +45,6 @@ export default function Hero() {
         </div>
       </div>
 
-      Decorative elements with animation
       <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-blue-100 rounded-full -z-10 mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
       <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-indigo-100 rounded-full -z-10 mix-blend-multiply filter blur-3xl opacity-70 animate-blob animate-[blob_7s_infinite_2000ms]"></div>
       <div className="absolute top-1/2 left-1/2 w-1/4 h-1/2 bg-purple-100 rounded-full -z-10 mix-blend-multiply filter blur-3xl opacity-70 animate-blob animate-[blob_7s_infinite_4000ms]"></div>
