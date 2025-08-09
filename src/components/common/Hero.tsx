@@ -6,7 +6,7 @@ import heroImage from '../../../public/hero.png';
 
 export default function Hero() {
   return (
-    <section className="relative py-6 md:py-10 bg-gradient-to-b from-blue-50 to-white">
+    <section className="relative py-6 md:py-10 ">
       <div className=" sm:px-6 lg:px-8 ">
         <div className="flex flex-col items-center">
           {/* Image Section */}
