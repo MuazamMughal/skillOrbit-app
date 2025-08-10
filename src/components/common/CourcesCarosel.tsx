@@ -74,7 +74,7 @@ const CourcesCarosel = () => {
             <h2 className="text-3xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
               Our Courses
             </h2>
-            <span className="opacity-0 group-hover:opacity-100 translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300 ease-in-out text-blue-600 hover:text-blue-800 cursor-pointer whitespace-nowrap">
+            <span className="opacity-0 group-hover:opacity-100 translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300 ease-in-out text-blue-600 mt-2 hover:text-blue-800 cursor-pointer whitespace-nowrap">
               Explore All
             </span>
             <div className="flex space-x-2">
