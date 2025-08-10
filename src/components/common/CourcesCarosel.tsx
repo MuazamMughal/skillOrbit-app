@@ -68,6 +68,7 @@ const CourcesCarosel = () => {
 
   return (
     <section className="py-16">
+        {/* carocel section  */}
       <div className="container mx-auto lg:px-12">
         <div className="group relative inline-block">
           <div className="flex items-center gap-6 mb-8">
