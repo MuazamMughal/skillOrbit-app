@@ -69,10 +69,14 @@ const CourcesCarosel = () => {
   return (
     <section className="py-16">
       <div className="container mx-auto lg:px-12">
-        <div className="flex justify-start gap-6 items-center mb-8">
-          <h2 className="text-3xl hover:text-blue-600 font-bold text-gray-900">Our Courses</h2>
-          <div className="flex items-center space-x-4">
-            <span className="text-blue-600 hover:text-blue-800 cursor-pointer">Explore All</span>
+        <div className="group relative inline-block">
+          <div className="flex items-center gap-6 mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+              Our Courses
+            </h2>
+            <span className="opacity-0 group-hover:opacity-100 translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300 ease-in-out text-blue-600 hover:text-blue-800 cursor-pointer whitespace-nowrap">
+              Explore All
+            </span>
             <div className="flex space-x-2">
               <button 
                 onClick={prevSlide}
