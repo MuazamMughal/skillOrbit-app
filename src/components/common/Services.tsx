@@ -88,6 +88,7 @@ const ServiceCard = ({ service, index, isVisible }: { service: any, index: numbe
       <p className="text-gray-600 mb-4">
         {service.description}
       </p>
+            {/* this is the reference to */}
       <a 
         href="#" 
         className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors"
