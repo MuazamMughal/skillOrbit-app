@@ -79,7 +79,7 @@ const ServiceCard = ({ service, index, isVisible }: { service: any, index: numbe
       className={`p-6 rounded-2xl bg-gradient-to-br ${service.color} border ${service.border} hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] ${isVisible ? 'animate-fadeInUp' : 'opacity-0'}`}
       style={{ animationDelay: `${index * 0.1}s` }}
     >
-      <div className="w-16 h-16 flex items-center justify-center rounded-xl bg-white shadow-md mb-6">
+      <div className="w-16 h-16 flex items-center justify-center rounded-xl shadow-md mb-6">
         {service.icon}
       </div>
       <h3 className="text-xl font-semibold text-gray-900 mb-3">
