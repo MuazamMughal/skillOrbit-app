@@ -193,3 +193,4 @@ const AnnocAndNotice = () => {
   );
 };
 
+export default AnnocAndNotice;
