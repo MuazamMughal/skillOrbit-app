@@ -2,6 +2,7 @@ import Hero from "@/components/common/Hero";
 import AfterHero from "@/components/common/AfterHero";
 import CourcesCarosel from "@/components/common/CourcesCarosel";
 import Services from "@/components/common/Services";
+import AnnocAndNotice from "@/components/common/AnnocAndNotice";
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
     <AfterHero/>
     <CourcesCarosel/>
     <Services/>
+    <AnnocAndNotice/>
     </>
   )
 }
