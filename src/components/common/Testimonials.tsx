@@ -106,12 +106,10 @@ const Testimonials = () => {
   return (
     <section className="py-20 ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-4 py-1.5 text-sm font-medium text-blue-600 bg-blue-100 rounded-full mb-4">
-            Testimonials
-          </span>
+        <div className="text-center max-w-3xl mx-auto mb-6">
+          
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            What Our Students Say
+            What Our Students Review
           </h2>
           <p className="text-lg text-gray-600">
             Don't just take our word for it. Hear from our students about their learning experience.
@@ -150,7 +148,7 @@ const Testimonials = () => {
                 }}
                 className="absolute inset-0"
               >
-                <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10">
+                <div className="bg-blue-100 rounded-2xl shadow-xl p-8 md:p-10">
                   <div className="flex flex-col md:flex-row gap-8">
                     <div className="md:w-1/3 flex flex-col items-center text-center">
                       <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg mb-4">
@@ -180,7 +178,7 @@ const Testimonials = () => {
                     </div>
                     <div className="md:w-2/3 flex items-center">
                       <div className="relative">
-                        <FaQuoteLeft className="text-blue-100 text-5xl absolute -left-2 -top-2" />
+                        <FaQuoteLeft className="text-blue-600 text-5xl absolute -left- -top-2" />
                         <blockquote className="relative z-10 text-lg text-gray-700">
                           {testimonials[currentIndex].content}
                         </blockquote>
