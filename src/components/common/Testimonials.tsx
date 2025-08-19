@@ -178,7 +178,7 @@ const Testimonials = () => {
                     </div>
                     <div className="md:w-2/3 flex items-center">
                       <div className="relative">
-                        <FaQuoteLeft className="text-blue-600 text-5xl absolute -left- -top-2" />
+                        <FaQuoteLeft className="text-blue-600 text-5xl absolute -left-7 -top-15" />
                         <blockquote className="relative z-10 text-lg text-gray-700">
                           {testimonials[currentIndex].content}
                         </blockquote>
@@ -190,7 +190,7 @@ const Testimonials = () => {
             </AnimatePresence>
           </div>
 
-          <div className="flex justify-center mt-10 space-x-3">
+          <div className="flex justify-center mt-8 space-x-3">
             {testimonials.map((_, index) => (
               <button
                 key={index}
@@ -208,14 +208,14 @@ const Testimonials = () => {
 
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 p-3 rounded-full bg-white shadow-lg text-blue-600 hover:bg-blue-50 transition-colors"
+            className="absolute -left-5 top-1/3 -translate-y-1/2 -translate-x-12 p-3 rounded-full bg-white shadow-lg text-blue-600 hover:bg-blue-50 transition-colors"
             aria-label="Previous testimonial"
           >
             <FaChevronLeft className="w-5 h-5" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 p-3 rounded-full bg-white shadow-lg text-blue-600 hover:bg-blue-50 transition-colors"
+            className="absolute -right-5 top-1/3 -translate-y-1/2 translate-x-12 p-3 rounded-full bg-white shadow-lg text-blue-600 hover:bg-blue-50 transition-colors"
             aria-label="Next testimonial"
           >
             <FaChevronRight className="w-5 h-5" />
