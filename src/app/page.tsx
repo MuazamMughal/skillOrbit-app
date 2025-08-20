@@ -4,7 +4,7 @@ import CourcesCarosel from "@/components/common/CourcesCarosel";
 import Services from "@/components/common/Services";
 import AnnocAndNotice from "@/components/common/AnnocAndNotice";
 import Testimonials from "@/components/common/Testimonials";
-
+import Contact from "@/components/common/contact";
 
 export default function Home() {
   return (
@@ -15,6 +15,7 @@ export default function Home() {
     <Services/>
     <AnnocAndNotice/>
     <Testimonials/>
+    <Contact/>
     </>
   )
 }
