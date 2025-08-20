@@ -1,18 +1,25 @@
 "use client";
 
 import React, { useState } from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaTwitter, FaLinkedin, FaPaperPlane, FaCommentAlt, FaHeadset } from 'react-icons/fa';
+import { FaPaperPlane } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
+interface FormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
 const Contact = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     subject: '',
     message: ''
   });
+  
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isChatOpen, setIsChatOpen] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -25,18 +32,13 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Form submission logic will go here
-    console.log('Form submitted:', formData);
+    
     // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
       alert('Thank you for your message! We will get back to you soon.');
       setFormData({ name: '', email: '', subject: '', message: '' });
     }, 1500);
-  };
-
-  const toggleChat = () => {
-    setIsChatOpen(!isChatOpen);
   };
 
   const fadeInUp = {
@@ -46,284 +48,149 @@ const Contact = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: [0.4, 0, 0.2, 1] as const
       }
     }
-  };
+  } as const;
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Have questions or feedback? We'd love to hear from you. Reach out to us through any of these channels.
-          </p>
-        </div>
-
-
-        {/* here is the main section */}
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Contact Information */}
-          <motion.div 
-            className="bg-white rounded-xl shadow-lg p-8"
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-              <FaHeadset className="mr-3 text-blue-600" />
-              Contact Information
-            </h3>
-            
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="bg-blue-100 p-3 rounded-full mr-4">
-                  <FaEnvelope className="text-blue-600 text-xl" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-800">Email Us</h4>
-                  <a href="mailto:support@skillorbit.com" className="text-blue-600 hover:underline">
-                    support@skillorbit.com
-                  </a>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="bg-blue-100 p-3 rounded-full mr-4">
-                  <FaPhone className="text-blue-600 text-xl" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-800">Call Us</h4>
-                  <a href="tel:+1234567890" className="text-gray-600 hover:text-blue-600">
-                    +1 (234) 567-890
-                  </a>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="bg-blue-100 p-3 rounded-full mr-4">
-                  <FaMapMarkerAlt className="text-blue-600 text-xl" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-800">Visit Us</h4>
-                  <p className="text-gray-600">123 Skill Street<br />San Francisco, CA 94103</p>
-                </div>
-              </div>
-              
-              <div className="pt-4">
-                <h4 className="font-semibold text-gray-800 mb-3">Follow Us</h4>
-                <div className="flex space-x-4">
-                  {[
-                    { icon: <FaFacebook className="text-2xl text-blue-600 hover:text-blue-700" />, url: '#' },
-                    { icon: <FaTwitter className="text-2xl text-blue-400 hover:text-blue-500" />, url: '#' },
-                    { icon: <FaLinkedin className="text-2xl text-blue-700 hover:text-blue-800" />, url: '#' },
-                  ].map((social, index) => (
-                    <a 
-                      key={index} 
-                      href={social.url} 
-                      className="bg-gray-100 p-2 rounded-full hover:bg-gray-200 transition-colors"
-                      aria-label={`Social media link ${index + 1}`}
-                    >
-                      {social.icon}
-                    </a>
-                  ))}
+    <section className="py-12">
+      <div className="container mx-auto px-4 max-w-5xl">
+        <motion.div 
+          className="bg-white rounded-2xl shadow-xl overflow-hidden"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <div className="md:flex">
+            <div className="md:w-1/3 bg-gradient-to-b from-blue-400 to-blue-600 p-8 text-white md:flex md:flex-col md:justify-center">
+              <div className="text-center md:text-left">
+                <h2 className="text-3xl font-bold mb-3">Get in Touch</h2>
+                <p className="text-blue-100 mb-8">
+                  We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
+                </p>
+                
+                <div className="space-y-4">
+                  <div className="flex items-center">
+                    <div className="bg-blue-500 p-2 rounded-full mr-3">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <span>support@skillorbit.com</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="bg-blue-500 p-2 rounded-full mr-3">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                    </div>
+                    <span>+1 (234) 567-890</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </motion.div>
-
-          {/* Feedback Form */}
-          <motion.div 
-            className="lg:col-span-2 bg-white rounded-xl shadow-lg p-8"
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-              <FaPaperPlane className="mr-3 text-blue-600" />
-              Send Us a Message
-            </h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="p-8 md:w-2/3">
+              <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <FaPaperPlane className="mr-2 text-blue-600" />
+                Send us a message
+              </h3>
+              
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                      Your Name <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                      placeholder="John Doe"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                      Email Address <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                      placeholder="your@email.com"
+                    />
+                  </div>
+                </div>
+                
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Your Name <span className="text-red-500">*</span>
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                    Subject <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-                    placeholder="John Doe"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                    placeholder="How can we help you?"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Email Address <span className="text-red-500">*</span>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                    Your Message <span className="text-red-500">*</span>
                   </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    value={formData.message}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-                    placeholder="your@email.com"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 resize-none"
+                    placeholder="Type your message here..."
                   />
                 </div>
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                  Subject <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-                  placeholder="How can we help you?"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                  Your Message <span className="text-red-500">*</span>
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition resize-none"
-                  placeholder="Type your message here..."
-                ></textarea>
-              </div>
-              
-              <div className="pt-2">
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-0.5 flex items-center justify-center"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <FaPaperPlane className="mr-2" />
-                      Send Message
-                    </>
-                  )}
-                </button>
-              </div>
-            </form>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Floating Chat Button */}
-      <motion.button
-        onClick={toggleChat}
-        className="fixed bottom-8 right-8 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 flex items-center justify-center z-50"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        aria-label="Open chat"
-      >
-        {isChatOpen ? (
-          <FaCommentAlt className="text-2xl" />
-        ) : (
-          <>
-            <FaCommentAlt className="mr-2" />
-            <span>Chat with us</span>
-          </>
-        )}
-      </motion.button>
-
-      {/* Chat Widget */}
-      {isChatOpen && (
-        <motion.div 
-          className="fixed bottom-24 right-8 w-96 bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col z-50"
-          initial={{ opacity: 0, y: 20, scale: 0.95 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 20, scale: 0.95 }}
-          transition={{ duration: 0.2 }}
-        >
-          {/* Chat Header */}
-          <div className="bg-blue-600 text-white p-4 flex justify-between items-center">
-            <div className="flex items-center">
-              <div className="w-3 h-3 bg-green-400 rounded-full mr-2"></div>
-              <h3 className="font-semibold">Live Chat Support</h3>
-            </div>
-            <button 
-              onClick={toggleChat}
-              className="text-white hover:text-gray-200"
-              aria-label="Close chat"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </button>
-          </div>
-          
-          {/* Chat Messages */}
-          <div className="flex-1 p-4 overflow-y-auto bg-gray-50" style={{ height: '400px' }}>
-            <div className="space-y-4">
-              <div className="flex">
-                <div className="bg-blue-100 rounded-xl rounded-tl-none p-3 max-w-xs">
-                  <p className="text-sm text-gray-800">Hello! 👋 Thanks for reaching out. How can we help you today?</p>
+                
+                <div className="pt-2">
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-0.5 flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <FaPaperPlane className="mr-2" />
+                        Send Message
+                      </>
+                    )}
+                  </button>
                 </div>
-              </div>
-              <div className="flex justify-end">
-                <div className="bg-blue-600 text-white rounded-xl rounded-tr-none p-3 max-w-xs">
-                  <p className="text-sm">Hi! I have a question about your courses.</p>
-                </div>
-              </div>
-              <div className="flex">
-                <div className="bg-blue-100 rounded-xl rounded-tl-none p-3 max-w-xs">
-                  <p className="text-sm text-gray-800">We'd be happy to help! What would you like to know?</p>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
-          
-          {/* Chat Input */}
-          <div className="border-t border-gray-200 p-4 bg-white">
-            <div className="flex items-center">
-              <input
-                type="text"
-                placeholder="Type your message..."
-                className="flex-1 border border-gray-300 rounded-l-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r-lg transition-colors">
-                <FaPaperPlane />
-              </button>
-            </div>
-          </div>
-        </motion.div>
-      )}
+        </motion.div>      </div>
     </section>
   );
 };
