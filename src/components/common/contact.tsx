@@ -91,6 +91,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+            {/* form section */}
             
             <div className="p-8 md:w-2/3">
               <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
