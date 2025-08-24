@@ -81,7 +81,24 @@ const Footer = () => {
             </ul>
           </div>
 
-          
+          {/* Popular Courses */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-white border-b border-gray-700 pb-2">Popular Courses</h4>
+            <ul className="space-y-2">
+              {courses.map((course) => (
+                <li key={course.name}>
+                  <a 
+                    href={course.href} 
+                    className="text-gray-400 hover:text-white transition-colors duration-300"
+                  >
+                    {course.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+         
       </div>
     </footer>
   );
