@@ -98,7 +98,19 @@ const Footer = () => {
             </ul>
           </div>
 
-         
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-white border-b border-gray-700 pb-2">Contact Us</h4>
+            <ul className="space-y-3">
+              {contactInfo.map((item, index) => (
+                <li key={index} className="flex items-start space-x-3">
+                  <span className="mt-1">{item.icon}</span>
+                  <span className="text-gray-400">{item.text}</span>
+                </li>
+              ))}
+            </ul>
+            
+           
       </div>
     </footer>
   );
