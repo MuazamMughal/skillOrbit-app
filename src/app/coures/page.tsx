@@ -102,10 +102,10 @@ const CoursesPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+      <div className="bg-gradient-to-b from-blue-100 to-blue-50 text-[#2554A4] py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Find Your Perfect Course</h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-[#2554A4] max-w-3xl mx-auto mb-8">
             Browse our wide range of professional courses and start your learning journey today
           </p>
           
@@ -115,11 +115,11 @@ const CoursesPage = () => {
               <input
                 type="text"
                 placeholder="Search courses..."
-                className="w-full py-4 px-6 pr-12 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full py-4 px-6 pr-12 rounded-lg border-2 border-[#2554A4] text-[#2554A4] focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
-              <FiSearch className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-xl" />
+              <FiSearch className="absolute right-4 top-1/2 transform -translate-y-1/2 text-[#2554A4] text-xl" />
             </div>
           </div>
         </div>
@@ -130,7 +130,7 @@ const CoursesPage = () => {
         {/* Filters */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
           <div className="flex items-center space-x-4">
-            <div className="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm">
+            <div className="flex items-center px-4 py-2 rounded-lg shadow-sm">
               <FiFilter className="text-gray-500 mr-2" />
               <span className="text-gray-700 mr-2">Filter:</span>
               
