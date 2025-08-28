@@ -100,7 +100,7 @@ const CoursesPage = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <div className="bg-gradient-to-b from-blue-100 to-blue-50 text-[#2554A4] py-20">
         <div className="container mx-auto px-4 text-center">
@@ -130,7 +130,7 @@ const CoursesPage = () => {
         {/* Filters */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
           <div className="flex items-center space-x-4">
-            <div className="flex items-center px-4 py-2 rounded-lg shadow-sm">
+            <div className="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm">
               <FiFilter className="text-gray-500 mr-2" />
               <span className="text-gray-700 mr-2">Filter:</span>
               
@@ -139,7 +139,7 @@ const CoursesPage = () => {
                   {category}
                   <FiChevronDown className="ml-1" />
                 </button>
-                <div className="absolute z-10 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden group-hover:block">
+                <div className="absolute z-10 mt-2 w-48 rounded-md shadow-lg py-1 hidden group-hover:block">
                   {categories.map((cat) => (
                     <button
                       key={cat}
@@ -159,7 +159,7 @@ const CoursesPage = () => {
                   {level}
                   <FiChevronDown className="ml-1" />
                 </button>
-                <div className="absolute z-10 mt-2 w-32 bg-white rounded-md shadow-lg py-1 hidden group-hover:block">
+                <div className="absolute z-10 mt-2 w-32 rounded-md shadow-lg py-1 hidden group-hover:block">
                   {levels.map((lvl) => (
                     <button
                       key={lvl}
@@ -193,7 +193,7 @@ const CoursesPage = () => {
 
         {/* Courses Grid */}
         {filteredCourses.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 bg-transparent md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCourses.map((course) => (
               <CourseCard key={course.id} {...course} />
             ))}
