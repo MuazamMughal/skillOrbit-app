@@ -44,7 +44,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <Image src="/logo2.png" alt="Logo" width={300} height={200} className="mb-6" />
-            <p className="text-gray-400">Empowering individuals with in-demand skills for the digital age. Learn from industry experts and accelerate your career.</p>
+            <p className="text-white">Empowering individuals with in-demand skills for the digital age. Learn from industry experts and accelerate your career.</p>
             <div className="flex space-x-4 pt-2">
               <a href="#" className="text-white hover:text-[#32A1DA] transition-colors duration-300">
                 <FaFacebook className="w-5 h-5" />
@@ -117,6 +117,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white text-sm">
+            Designed by Muazam Mughal
             &copy; {currentYear} SkillOrbit. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">

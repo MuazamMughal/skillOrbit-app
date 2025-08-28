@@ -26,7 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-white container mx-auto bg-gradient-to-b from-blue-100 to-white">
+      {/* <body className="bg-white container mx-auto bg-gradient-to-b from-[#CECA30] via-[#2554A4] to-[#32A1DA]"> */}
+      <body className="bg-white container mx-auto bg-gradient-to-b from-blue-100 via-blue-50 to-blue-100">
+
         <div className=" ">
         <Navbar />
         {children}
