@@ -169,6 +169,40 @@ const ServicesPage = () => {
         </div>
       </div>
 
+      {/* CTA Section */}
+      <div className="bg-gradient-to-t from-blue-300 to-blue-500">
+        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+              Ready to start your project?
+            </h2>
+            <p className="mt-4 text-xl text-blue-100 max-w-3xl mx-auto">
+              Let's work together to bring your ideas to life. Contact us today for a free consultation.
+            </p>
+            <div className="mt-8">
+              <a
+                href="/contact"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50 transition-colors duration-300"
+              >
+                Get Started
+                <svg
+                  className="ml-3 -mr-1 h-5 w-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
