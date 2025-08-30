@@ -118,6 +118,30 @@ const ServicesPage = () => {
         </div>
       </div>
 
+      {/* Stats Section */}
+      <div className=" py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((stat) => (
+              <motion.div
+                key={stat.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: stat.id * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600 mb-4">
+                  <stat.icon className="h-6 w-6" aria-hidden="true" />
+                </div>
+                <p className="text-3xl font-bold text-gray-900">{stat.value}</p>
+                <p className="mt-2 text-sm font-medium text-gray-500">{stat.name}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 };
