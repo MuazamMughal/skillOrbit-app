@@ -161,7 +161,26 @@ const AboutPage = () => {
         </div>
       </div>
 
-   
+      {/* CTA Section */}
+      <div className="bg-gradient-to-r from-blue-600 to-blue-800">
+        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+            <span className="block">Ready to start your next project?</span>
+          </h2>
+          <p className="mt-4 text-xl text-blue-100 max-w-3xl mx-auto">
+            Get in touch with us today and let's create something amazing together.
+          </p>
+          <div className="mt-8">
+            <a
+              href="/contact"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50 transition-colors duration-300"
+            >
+              Get in Touch
+              <FiArrowRight className="ml-3 -mr-1 h-5 w-5" />
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
