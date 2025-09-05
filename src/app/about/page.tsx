@@ -78,8 +78,49 @@ const AboutPage = () => {
         </div>
       </div>
 
+      {/* Our Story */}
+      <div className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:text-center">
+            <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Our Story</h2>
+            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              A Passion for Innovation
+            </p>
+            <p className="mt-4 max-w-3xl text-xl text-gray-500 lg:mx-auto">
+              Founded in 2020, we started as a small team of passionate individuals with a shared vision to revolutionize the tech industry. Today, we're proud to serve clients worldwide with our cutting-edge solutions.
+            </p>
+          </div>
+
+          <div className="mt-16">
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+              {values.map((value, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="pt-6"
+                >
+                  <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                    <div className="-mt-6">
+                      <div className="inline-flex items-center justify-center p-3 bg-blue-500 rounded-md shadow-lg">
+                        {value.icon}
+                      </div>
+                      <h3 className="mt-4 text-lg font-medium text-gray-900">{value.title}</h3>
+                      <p className="mt-2 text-base text-gray-500">
+                        {value.description}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
      
-    </div>
   );
 };
 
