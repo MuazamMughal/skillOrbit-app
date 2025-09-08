@@ -115,6 +115,7 @@ const Testimonials = () => {
             Don't just take our word for it. Hear from our students about their learning experience.
           </p>
         </div>
+        {/* main div */}
 
         <div className="relative max-w-5xl mx-auto">
           <div 
