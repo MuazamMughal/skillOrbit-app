@@ -205,6 +205,7 @@ const Testimonials = () => {
               />
             ))}
           </div>
+          {/* left right button */}
 
           <button
             onClick={prevSlide}
