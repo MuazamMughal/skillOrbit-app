@@ -10,7 +10,7 @@ interface CourseCardProps {
   duration: string;
   level: string;
   students: number;
-  price: string;
+  price?: string;
   whatsappLink: string;
 }
 
@@ -70,7 +70,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg bg-green-600 px-6 py-2 font-medium text-white transition-colors hover:bg-green-700"
+            className="rounded-lg bg-blue-600 px-6 py-2 font-medium text-white transition-colors hover:bg-blue-700"
           >
             Enroll Now
           </Link>

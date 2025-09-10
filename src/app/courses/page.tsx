@@ -15,11 +15,11 @@ const CoursesPage = () => {
       id: '1',
       title: 'Web Development Bootcamp',
       description: 'Learn full-stack web development with modern technologies including React, Node.js, and MongoDB.',
-      image: '/courses/web-dev.jpg', // Replace with your image path
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80',
       duration: '12 Weeks',
       level: 'Beginner',
       students: 1245,
-      price: '$299',
+      // price: '$299',
       category: 'Web Development',
       whatsappLink: 'https://wa.me/1234567890?text=I%20want%20to%20enroll%20in%20Web%20Development%20Bootcamp',
     },
@@ -27,11 +27,11 @@ const CoursesPage = () => {
       id: '2',
       title: 'Data Science Fundamentals',
       description: 'Master data analysis, visualization, and machine learning with Python and popular libraries.',
-      image: '/courses/data-science.jpg', // Replace with your image path
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
       duration: '10 Weeks',
       level: 'Intermediate',
       students: 892,
-      price: '$349',
+      // price: '$349',  
       category: 'Data Science',
       whatsappLink: 'https://wa.me/1234567890?text=I%20want%20to%20enroll%20in%20Data%20Science%20Fundamentals',
     },
@@ -39,11 +39,11 @@ const CoursesPage = () => {
       id: '3',
       title: 'Mobile App Development',
       description: 'Build cross-platform mobile applications using React Native and Firebase.',
-      image: '/courses/mobile-dev.jpg', // Replace with your image path
+      image: 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
       duration: '8 Weeks',
       level: 'Intermediate',
       students: 756,
-      price: '$279',
+      // price: '$279',
       category: 'Mobile Development',
       whatsappLink: 'https://wa.me/1234567890?text=I%20want%20to%20enroll%20in%20Mobile%20App%20Development',
     },
@@ -51,11 +51,11 @@ const CoursesPage = () => {
       id: '4',
       title: 'UI/UX Design Masterclass',
       description: 'Learn user-centered design principles and tools like Figma and Adobe XD.',
-      image: '/courses/ui-ux.jpg', // Replace with your image path
+      image: 'https://images.unsplash.com/photo-1541462608143-67571c6738dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
       duration: '6 Weeks',
       level: 'Beginner',
       students: 1023,
-      price: '$249',
+      // price: '$249',
       category: 'Design',
       whatsappLink: 'https://wa.me/1234567890?text=I%20want%20to%20enroll%20in%20UI%2FUX%20Design%20Masterclass',
     },
@@ -63,11 +63,11 @@ const CoursesPage = () => {
       id: '5',
       title: 'Cloud Computing with AWS',
       description: 'Master cloud infrastructure and services with Amazon Web Services.',
-      image: '/courses/cloud.jpg', // Replace with your image path
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80',
       duration: '10 Weeks',
       level: 'Advanced',
       students: 543,
-      price: '$399',
+      // price: '$399',
       category: 'Cloud Computing',
       whatsappLink: 'https://wa.me/1234567890?text=I%20want%20to%20enroll%20in%20Cloud%20Computing%20with%20AWS',
     },
@@ -75,11 +75,11 @@ const CoursesPage = () => {
       id: '6',
       title: 'Digital Marketing Pro',
       description: 'Learn SEO, social media marketing, and content strategy to grow businesses online.',
-      image: '/courses/digital-marketing.jpg', // Replace with your image path
+      image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
       duration: '8 Weeks',
       level: 'Beginner',
       students: 1342,
-      price: '$229',
+      // price: '$229',
       category: 'Marketing',
       whatsappLink: 'https://wa.me/1234567890?text=I%20want%20to%20enroll%20in%20Digital%20Marketing%20Pro',
     },
@@ -193,7 +193,7 @@ const CoursesPage = () => {
 
         {/* Courses Grid */}
         {filteredCourses.length > 0 ? (
-          <div className="grid grid-cols-1 bg-transparent md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid mx-20 grid-cols-1 bg-transparent md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCourses.map((course) => (
               <CourseCard key={course.id} {...course} />
             ))}

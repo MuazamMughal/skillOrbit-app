@@ -28,7 +28,7 @@ const AboutPage = () => {
     {
       name: 'Emily Rodriguez',
       role: 'UX/UI Designer',
-      image: 'https://images.unsplash.com/photo-1573496358961-3cde308acf6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
       bio: 'Creative designer focused on delivering exceptional user experiences.'
     }
   ];

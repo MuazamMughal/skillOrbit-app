@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 const Footer = () => {
@@ -38,7 +39,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-t from-blue-700 to-blue-400 text-white mt-12 pt-16 pb-8">
+    <footer className="bg-gradient-to-t from-blue-700 to-blue-300 text-white mt-12 pt-16 pb-8">
       <div className="container mx-auto px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
@@ -46,19 +47,19 @@ const Footer = () => {
             <Image src="/logo2.png" alt="Logo" width={300} height={200} className="mb-6" />
             <p className="text-white">Empowering individuals with in-demand skills for the digital age. Learn from industry experts and accelerate your career.</p>
             <div className="flex space-x-4 pt-2">
-              <a href="#" className="text-white hover:text-[#32A1DA] transition-colors duration-300">
+              <a href="#" className="text-white hover:text-[#2554A4] transition-colors duration-300">
                 <FaFacebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-white hover:text-[#32A1DA] transition-colors duration-300">
+              <a href="#" className="text-white hover:text-[#2554A4] transition-colors duration-300">
                 <FaTwitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-white hover:text-[#32A1DA] transition-colors duration-300">
+              <a href="#" className="text-white hover:text-[#2554A4] transition-colors duration-300">
                 <FaLinkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-white hover:text-[#32A1DA] transition-colors duration-300">
+              <a href="#" className="text-white hover:text-[#2554A4] transition-colors duration-300">
                 <FaInstagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-white hover:text-[#32A1DA] transition-colors duration-300">
+              <a href="#" className="text-white hover:text-[#2554A4] transition-colors duration-300">
                 <FaYoutube className="w-5 h-5" />
               </a>
             </div>
@@ -66,13 +67,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-white border-b border-gray-700 pb-2">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white border-b border-white pb-2">Quick Links</h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <a 
                     href={link.href} 
-                    className="text-white hover:text-[#32A1DA] transition-colors duration-300"
+                    className="text-white hover:text-[#2554A4] transition-colors duration-300"
                   >
                     {link.name}
                   </a>
@@ -83,13 +84,13 @@ const Footer = () => {
 
           {/* Popular Courses */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-white border-b border-gray-700 pb-2">Popular Courses</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white border-b border-white pb-2">Popular Courses</h4>
             <ul className="space-y-2">
               {courses.map((course) => (
                 <li key={course.name}>
                   <a 
                     href={course.href} 
-                    className="text-white hover:text-[#32A1DA] transition-colors duration-300"
+                    className="text-white hover:text-[#2554A4] transition-colors duration-300"
                   >
                     {course.name}
                   </a>
@@ -100,7 +101,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-white border-b border-gray-700 pb-2">Contact Us</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white border-b border-white pb-2">Contact Us</h4>
             <ul className="space-y-3">
               {contactInfo.map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
@@ -115,10 +116,10 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-white mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white text-sm">
-            Designed by Muazam Mughal
-            &copy; {currentYear} SkillOrbit. All rights reserved.
+           <Link href="https://pro-portfolio-app.vercel.app/"> Designed by <span className="text-white font-bold">Muazam Mughal </span>
+           &copy; {currentYear} SkillOrbit. All rights reserved.</Link>
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-white hover:text-[#32A1DA] text-sm transition-colors duration-300">
