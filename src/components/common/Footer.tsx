@@ -38,7 +38,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#2554A4] text-white mt-12 pt-16 pb-8">
+    <footer className="bg-gradient-to-t from-blue-700 to-blue-400 text-white mt-12 pt-16 pb-8">
       <div className="container mx-auto px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
