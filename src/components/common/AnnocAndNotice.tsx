@@ -71,7 +71,7 @@ const AnnocAndNotice = () => {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-5xl mx-auto mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Stay Updated
           </h2>
@@ -80,7 +80,7 @@ const AnnocAndNotice = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-sm overflow-hidden">
+        <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-sm overflow-hidden">
           {/* Tabs */}
           <div className="flex border-b border-gray-200">
             <button
