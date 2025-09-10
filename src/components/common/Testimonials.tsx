@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaQuoteLeft, FaStar, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 interface Testimonial {
   id: number;
@@ -28,7 +29,7 @@ const testimonials: Testimonial[] = [
     id: 2,
     name: 'Sarah Williams',
     role: 'Data Science Enthusiast',
-    avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
+    avatar: 'https://randomuser.me/api/portraits/men/44.jpg',
     content: 'The data science program provided a perfect balance of theory and practical applications. The instructors were always available to help, and the curriculum was up-to-date with industry standards.',
     rating: 5,
     course: 'Data Science Professional'
@@ -46,7 +47,7 @@ const testimonials: Testimonial[] = [
     id: 4,
     name: 'Emily Rodriguez',
     role: 'UX/UI Designer',
-    avatar: 'https://randomuser.me/api/portraits/women/68.jpg',
+    avatar: 'https://randomuser.me/api/portraits/men/68.jpg',
     content: 'The design courses here are exceptional. The portfolio I built during the program helped me secure multiple freelance clients even before graduation. The career support is unmatched!',
     rating: 4,
     course: 'UX/UI Design Masterclass'
@@ -112,7 +113,7 @@ const Testimonials = () => {
             What Our Students Review
           </h2>
           <p className="text-lg text-gray-600">
-            Don't just take our word for it. Hear from our students about their learning experience.
+            Don&apos;t just take our word for it. Hear from our students about their learning experience.
           </p>
         </div>
         {/* main div */}
@@ -153,10 +154,13 @@ const Testimonials = () => {
                   <div className="flex flex-col md:flex-row gap-8">
                     <div className="md:w-1/3 flex flex-col items-center text-center">
                       <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg mb-4">
-                        <img 
+                        <Image
                           src={testimonials[currentIndex].avatar} 
                           alt={testimonials[currentIndex].name}
-                          className="w-full h-full object-cover"
+                          width={128}
+                          height={128}
+                          className="object-cover"
+                          priority
                         />
                       </div>
                       <h3 className="text-xl font-bold text-gray-900">

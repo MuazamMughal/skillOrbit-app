@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 interface CourseCardProps {
-  id: string;
+  id?: string;
   title: string;
   description: string;
   image: string;
@@ -15,7 +15,6 @@ interface CourseCardProps {
 }
 
 const CourseCard: React.FC<CourseCardProps> = ({
-  id,
   title,
   description,
   image,

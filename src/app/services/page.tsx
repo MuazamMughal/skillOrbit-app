@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { FiCheckCircle, FiClock, FiUsers, FiAward, FiLayers, FiCode, FiDatabase, FiSmartphone } from 'react-icons/fi';
+import { FiCheckCircle, FiClock, FiUsers, FiAward } from 'react-icons/fi';
 import ServiceCard from '@/components/services/ServiceCard';
 
 const ServicesPage = () => {
@@ -177,7 +177,7 @@ const ServicesPage = () => {
               Ready to start your project?
             </h2>
             <p className="mt-4 text-xl text-blue-100 max-w-3xl mx-auto">
-              Let's work together to bring your ideas to life. Contact us today for a free consultation.
+              Lets work together to bring your ideas to life. Contact us today for a free consultation.
             </p>
             <div className="mt-8">
               <a

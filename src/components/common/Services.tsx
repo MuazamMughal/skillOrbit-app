@@ -48,24 +48,22 @@ const services = [
   }
 ];
 
-const useIntersectionObserver = (ref: React.RefObject<HTMLElement>, options = {}) => {
+const useIntersectionObserver = (ref: React.RefObject<HTMLElement>, options: IntersectionObserverInit = {}) => {
   const [isIntersecting, setIsIntersecting] = useState(false);
 
   useEffect(() => {
+    const currentRef = ref.current;
     const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsIntersecting(true);
-        observer.unobserve(entry.target);
-      }
+      setIsIntersecting(entry.isIntersecting);
     }, options);
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, [ref, options]);
@@ -73,7 +71,23 @@ const useIntersectionObserver = (ref: React.RefObject<HTMLElement>, options = {}
   return isIntersecting;
 };
 
-const ServiceCard = ({ service, index, isVisible }: { service: any, index: number, isVisible: boolean }) => {
+interface ServiceType {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  color: string;
+  border: string;
+}
+
+const ServiceCard = ({ 
+  service, 
+  index, 
+  isVisible 
+}: { 
+  service: ServiceType; 
+  index: number; 
+  isVisible: boolean 
+}) => {
   return (
     <div 
       className={`p-6 rounded-2xl bg-gradient-to-br ${service.color} border ${service.border} hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] ${isVisible ? 'animate-fadeInUp' : 'opacity-0'}`}
@@ -127,8 +141,8 @@ const Services = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
             Comprehensive Digital Solutions
           </h2>
-          <p className="text-lg text-gray-600">
-            We offer a wide range of professional services to help your business grow in the digital landscape.
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            We offer a comprehensive suite of services designed to help your business thrive in the digital age. Our team of experts is here to bring your vision to life.
           </p>
         </div>
 

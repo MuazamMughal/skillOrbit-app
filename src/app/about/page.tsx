@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FiUsers, FiTarget, FiAward, FiHeart, FiCheckCircle, FiArrowRight } from 'react-icons/fi';
+import { FiTarget, FiAward, FiHeart, FiArrowRight } from 'react-icons/fi';
 
 const AboutPage = () => {
   const teamMembers = [
@@ -88,7 +88,7 @@ const AboutPage = () => {
               A Passion for Innovation
             </p>
             <p className="mt-4 max-w-3xl text-xl text-gray-500 lg:mx-auto">
-              Founded in 2020, we started as a small team of passionate individuals with a shared vision to revolutionize the tech industry. Today, we're proud to serve clients worldwide with our cutting-edge solutions.
+              Founded in 2020&rsquo; we started as a small team of passionate individuals with a shared vision to revolutionize the tech industry. Today, we&rsquo;re proud to serve clients worldwide with our cutting-edge solutions.
             </p>
           </div>
 
@@ -169,7 +169,7 @@ const AboutPage = () => {
             <span className="block">Ready to start your next project?</span>
           </h2>
           <p className="mt-4 text-xl text-blue-100 max-w-3xl mx-auto">
-            Get in touch with us today and let's create something amazing together.
+            Get in touch with us today and lets create something amazing together.
           </p>
           <div className="mt-8">
             <Link
