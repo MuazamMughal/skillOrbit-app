@@ -54,7 +54,7 @@ const Contact = () => {
   } as const;
 
   return (
-    <section className="py-6">
+    <section id="contact" className="py-20 bg-gray-50">
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">Have questions or want to get in touch? We'd love to hear from you!</p>

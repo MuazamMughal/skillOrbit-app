@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FiUsers, FiTarget, FiAward, FiHeart, FiCheckCircle, FiArrowRight } from 'react-icons/fi';
 
@@ -171,13 +172,13 @@ const AboutPage = () => {
             Get in touch with us today and let's create something amazing together.
           </p>
           <div className="mt-8">
-            <a
-              href="/contact"
+            <Link
+              href="/#contact"
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50 transition-colors duration-300"
             >
               Get in Touch
               <FiArrowRight className="ml-3 -mr-1 h-5 w-5" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
