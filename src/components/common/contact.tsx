@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { FaPaperPlane } from 'react-icons/fa';
+import { FaPaperPlane, FaWhatsapp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 interface FormData {
@@ -54,7 +54,7 @@ const Contact = () => {
   } as const;
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20">
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">Have questions or want to get in touch? We'd love to hear from you!</p>
@@ -94,6 +94,15 @@ const Contact = () => {
                     </div>
                     <span>+1 (234) 567-890</span>
                   </div>
+                  <a 
+                    href="https://wa.me/1234567890" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="mt-6 w-full flex items-center justify-center gap-2 px-4 py-3 bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                  >
+                    <FaWhatsapp className="w-6 h-6" />
+                    <span>Chat on WhatsApp</span>
+                  </a>
                 </div>
               </div>
             </div>
