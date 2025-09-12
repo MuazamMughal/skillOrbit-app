@@ -44,7 +44,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <Image src="/logo2.png" alt="Logo" width={300} height={200} className="mb-6" />
+            <Image src="/logo2.png" alt="Logo" width={300} height={58} className="mb-6" />
             <p className="text-white">Empowering individuals with in-demand skills for the digital age. Learn from industry experts and accelerate your career.</p>
             <div className="flex space-x-4 pt-2">
               <a href="#" className="text-white hover:text-[#2554A4] transition-colors duration-300">
