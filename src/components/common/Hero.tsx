@@ -28,13 +28,13 @@ export default function Hero() {
           {/* Text Content */}
           <div className="text-center max-w-4xl">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-700 leading-tight ">
-              Transform Your <span className="text-blue-600">Skills</span> with Our Expert-Led Courses
+              Transform Your <span className="text-[#2554A4]">Skills</span> with Our Expert-Led Courses
             </h1>
-            <p className="text-lg mx-24 text-gray-600 mb-4 sm:px-0">
+            <p className="text-lg mx-24 text-[#32325D] mb-4 sm:px-0">
               Join thousands of learners worldwide and unlock your potential with our comprehensive courses designed by industry experts.
             </p>
-            <div className="flex flex-col sm:flex-row gap-8 justify-center">
-              <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <div className="flex flex-col mt-4 sm:flex-row gap-8 justify-center">
+              <button className="px-8 py-3 bg-[#2554A4] hover:bg-[#32325D] text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-3">
                 Explore Courses
               </button>
               {/* <button className="px-8 py-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-medium rounded-lg transition-all duration-300">
