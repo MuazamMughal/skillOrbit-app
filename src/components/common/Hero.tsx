@@ -31,7 +31,7 @@ export default function Hero() {
               Transform Your <span className="text-[#2554A4]">Skills</span> with Our Expert-Led Courses
             </h1>
             <p className="text-lg mx-24 text-[#32325D] mb-4 sm:px-0">
-              Join thousands of learners worldwide and unlock your potential with our comprehensive courses designed by industry experts.
+            SkillOrbit is more than an IT training center — its a mission to empower individuals with practical skills, career counseling, and real opportunities. We provide affordable, market-driven IT courses and professional services that help students, freelancers, and businesses grow with confidence.
             </p>
             <div className="flex flex-col mt-4 sm:flex-row gap-8 justify-center">
               <button className="px-8 py-3 bg-[#2554A4] hover:bg-[#32325D] text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-3">
