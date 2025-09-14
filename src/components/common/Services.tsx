@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
 import { FaLaptopCode, FaMobileAlt, FaChartLine, FaServer, FaPalette, FaRocket } from 'react-icons/fa';
 
@@ -12,12 +13,13 @@ const services = [
     border: 'border-blue-200'
   },
   {
-    icon: <FaMobileAlt className="w-8 h-8 text-purple-600" />,
-    title: 'Mobile Apps',
-    description: 'Cross-platform mobile applications that deliver seamless experiences across all devices.',
-    color: 'from-purple-100 to-purple-50',
-    border: 'border-purple-200'
+    icon: <FaRocket className="w-8 h-8 text-indigo-600" />,
+    title: 'Startup Solutions',
+    description: 'End-to-end technology solutions to help startups launch and scale efficiently.',
+    color: 'from-indigo-100 to-indigo-50',
+    border: 'border-indigo-200'
   },
+ 
   {
     icon: <FaChartLine className="w-8 h-8 text-green-600" />,
     title: 'Digital Marketing',
@@ -26,26 +28,21 @@ const services = [
     border: 'border-green-200'
   },
   {
-    icon: <FaServer className="w-8 h-8 text-orange-600" />,
-    title: 'Cloud Solutions',
-    description: 'Scalable and secure cloud infrastructure tailored to your business needs.',
-    color: 'from-orange-100 to-orange-50',
-    border: 'border-orange-200'
-  },
-  {
-    icon: <FaPalette className="w-8 h-8 text-pink-600" />,
-    title: 'UI/UX Design',
-    description: 'Beautiful and intuitive interfaces that enhance user engagement and satisfaction.',
-    color: 'from-pink-100 to-pink-50',
-    border: 'border-pink-200'
-  },
-  {
-    icon: <FaRocket className="w-8 h-8 text-indigo-600" />,
-    title: 'Startup Solutions',
-    description: 'End-to-end technology solutions to help startups launch and scale efficiently.',
-    color: 'from-indigo-100 to-indigo-50',
-    border: 'border-indigo-200'
-  }
+    icon: <FaMobileAlt className="w-8 h-8 text-purple-600" />,
+     title: 'Mobile Apps',
+     description: 'Cross-platform mobile applications that deliver seamless experiences across all devices.',
+     color: 'from-purple-100 to-purple-50',
+     border: 'border-purple-200'
+   },
+ 
+  // {
+  //   icon: <FaPalette className="w-8 h-8 text-pink-600" />,
+  //   title: 'UI/UX Design',
+  //   description: 'Beautiful and intuitive interfaces that enhance user engagement and satisfaction.',
+  //   color: 'from-pink-100 to-pink-50',
+  //   border: 'border-pink-200'
+  // },
+
 ];
 
 const useIntersectionObserver = (ref: React.RefObject<HTMLElement>, options: IntersectionObserverInit = {}) => {
@@ -135,13 +132,12 @@ const Services = () => {
     <section ref={sectionRef} className="py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-24">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-4 py-1.5 text-sm font-medium text-blue-600 bg-blue-100 rounded-full mb-4">
-            Our Services
-          </span>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+         
+          
+          <h2 className="text-4xl font-bold text-[#2554A4] mb-6">
             Comprehensive Digital Solutions
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-[#32325D] max-w-3xl mx-auto">
             We offer a comprehensive suite of services designed to help your business thrive in the digital age. Our team of experts is here to bring your vision to life.
           </p>
         </div>
@@ -158,12 +154,14 @@ const Services = () => {
         </div>
 
         <div className="mt-16 text-center">
+          <Link href="/services">
           <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300 inline-flex items-center">
             View All Services
             <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </button>
+          </Link>
         </div>
       </div>
     </section>
