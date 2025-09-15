@@ -21,61 +21,54 @@ const AnnocAndNotice = () => {
     {
       id: 1,
       title: 'New Course Module Released',
-      description: 'The advanced JavaScript module is now available. Complete the previous assignments to unlock it.',
-      date: '2 hours ago',
-      author: 'Prof. Smith',
+      description: 'New course module is now available. Crypto-Trading, Web Development, COMET, App Development, Graphic Designing, IELTS Preparation, Digital Marketing',
+      date: '2025-09-16',
+      author: 'Skill Orbit',
       isNew: true
     },
-    {
-      id: 2,
-      title: 'Weekly Live Session',
-      description: 'Join us this Friday at 3 PM for a live Q&A session about the current module.',
-      date: '1 day ago',
-      author: 'Dr. Johnson',
-      isNew: true
-    },
-    {
-      id: 3,
-      title: 'Assignment Deadline Extended',
-      description: 'The deadline for the React project has been extended to next Monday.',
-      date: '3 days ago',
-      author: 'Prof. Williams',
-      isNew: false
-    }
+  
+    // {
+    //   id: 3,
+    //   title: 'Assignment Deadline Extended',
+    //   description: 'The deadline for the React project has been extended to next Monday.',
+    //   date: '3 days ago',
+    //   author: 'Prof. Williams',
+    //   isNew: false
+    // }
   ];
 
   const notices = [
-    {
-      id: 1,
-      title: 'System Maintenance',
-      description: 'The learning platform will be down for maintenance on September 15th from 2 AM to 5 AM.',
-      date: '2023-09-10',
-      type: 'maintenance'
-    },
-    {
-      id: 2,
-      title: 'New Feature: Study Groups',
-      description: 'Create and join study groups directly from your dashboard to collaborate with peers.',
-      date: '2023-09-08',
-      type: 'feature'
-    },
-    {
-      id: 3,
-      title: 'Mobile App Update',
-      description: 'Update your mobile app to the latest version for better performance and new features.',
-      date: '2023-09-05',
-      type: 'update'
-    }
+    // {
+    //   id: 1,
+    //   title: 'System Maintenance',
+    //   description: 'The learning platform will be down for maintenance on September 15th from 2 AM to 5 AM.',
+    //   date: '2023-09-10',
+    //   type: 'maintenance'
+    // },
+    // {
+    //   id: 2,
+    //   title: 'New Feature: Study Groups',
+    //   description: 'Create and join study groups directly from your dashboard to collaborate with peers.',
+    //   date: '2023-09-08',
+    //   type: 'feature'
+    // },
+    // {
+    //   id: 3,
+    //   title: 'Mobile App Update',
+    //   description: 'Update your mobile app to the latest version for better performance and new features.',
+    //   date: '2023-09-05',
+    //   type: 'update'
+    // }
   ];
 
   return (
     <section className="py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-5xl mx-auto mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-[#2554A4] mb-4">
             Stay Updated
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-[#32325D]">
             Never miss important updates, announcements, and notices about your courses.
           </p>
         </div>
@@ -183,9 +176,9 @@ const AnnocAndNotice = () => {
           </div>
 
           <div className="px-6 py-4 bg-gray-50 border-t border-gray-100">
-            <button className="w-full py-2.5 text-center text-blue-600 font-medium hover:bg-blue-50 rounded-md transition-colors">
-              View all {activeTab === 'announcements' ? 'announcements' : 'notices'}
-            </button>
+            <p   className="w-full py-2.5 text-center text-blue-600 font-medium  rounded-md transition-colors">
+              View  {activeTab === 'announcements' ? 'announcements' : 'notices'} 
+            </p>
           </div>
         </div>
       </div>

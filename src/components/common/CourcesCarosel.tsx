@@ -100,9 +100,11 @@ const CourcesCarosel = () => {
             <h2 className="text-3xl font-bold text-[#2554A4] group-hover:text-blue-600 transition-colors duration-300">
               Our Courses
             </h2>
+            <Link href="/courses">
             <span className="opacity-0 group-hover:opacity-100 translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300 ease-in-out text-blue-600 mt-2 hover:text-blue-800 cursor-pointer whitespace-nowrap">
               Explore All
             </span>
+            </Link>
             <div className="flex space-x-2">
               <button 
                 onClick={prevSlide}
