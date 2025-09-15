@@ -56,8 +56,8 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20">
       <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">Have questions or want to get in touch? We&apos;d love to hear from you!</p>
+        <h2 className="text-4xl font-bold text-[#2554A4] mb-4">Contact Us</h2>
+        <p className="text-lg text-[#32325D] max-w-2xl mx-auto">Have questions or want to get in touch? We&apos;d love to hear from you!</p>
       </div>
       {/* here is the main section */}
       <div className="container mx-auto px-4 max-w-5xl">
@@ -70,7 +70,7 @@ const Contact = () => {
           variants={fadeInUp}
         >
           <div className="md:flex">
-            <div className="md:w-1/3 bg-gradient-to-b from-blue-400 to-blue-600 p-8 text-white md:flex md:flex-col md:justify-center">
+            <div className="md:w-1/3 bg-gradient-to-b from-[#32a1da] to-[#2554A4] p-8 text-white md:flex md:flex-col md:justify-center">
               <div className="text-center md:text-left">
                 <h2 className="text-3xl font-bold mb-3">Get in Touch</h2>
                 <p className="text-blue-100 mb-8">
@@ -84,7 +84,7 @@ const Contact = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
-                    <span>support@skillorbit.com</span>
+                    <span>skillorbit.itc@gmail.com</span>
                   </div>
                   <div className="flex items-center">
                     <div className="bg-blue-500 p-2 rounded-full mr-3">
@@ -92,10 +92,10 @@ const Contact = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                     </div>
-                    <span>+1 (234) 567-890</span>
+                    <span>+92 333 483 4116</span>
                   </div>
                   <a 
-                    href="https://wa.me/1234567890" 
+                    href="https://wa.me/923334834116" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="mt-6 w-full flex items-center justify-center gap-2 px-4 py-3 bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
@@ -110,7 +110,7 @@ const Contact = () => {
             
             <div className="p-8 md:w-2/3">
               <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <FaPaperPlane className="mr-2 text-blue-600" />
+                <FaPaperPlane className="mr-2 text-[#2554A4]" />
                 Send us a message
               </h3>
               
@@ -185,7 +185,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-0.5 flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
+                    className="w-full bg-[#32a1da] hover:bg-[#2554A4] text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-0.5 flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <>
