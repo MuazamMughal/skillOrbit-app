@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import heroImage from '../../../public/hero.png';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -34,9 +35,9 @@ export default function Hero() {
             SkillOrbit is more than an IT training center — its a mission to empower individuals with practical skills, career counseling, and real opportunities. We provide affordable, market-driven IT courses and professional services that help students, freelancers, and businesses grow with confidence.
             </p>
             <div className="flex flex-col mt-4 sm:flex-row gap-8 justify-center">
-              <button className="px-8 py-3 bg-[#2554A4] hover:bg-[#32325D] text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-3">
+              <Link href = "/courses"  className="px-8 py-3 bg-[#2554A4] hover:bg-[#32325D] text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-3">
                 Explore Courses
-              </button>
+              </Link>
               {/* <button className="px-8 py-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-medium rounded-lg transition-all duration-300">
                 Learn More
               </button> */}
