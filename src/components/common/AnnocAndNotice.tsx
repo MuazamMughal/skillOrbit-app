@@ -38,13 +38,13 @@ const AnnocAndNotice = () => {
   ];
 
   const notices = [
-    // {
-    //   id: 1,
-    //   title: 'System Maintenance',
-    //   description: 'The learning platform will be down for maintenance on September 15th from 2 AM to 5 AM.',
-    //   date: '2023-09-10',
-    //   type: 'maintenance'
-    // },
+    {
+      id: 1,
+      title: 'New Course Module Released',
+      description: 'New course module is now available. Crypto-Trading, Web Development, COMET, App Development, Graphic Designing, IELTS Preparation, Digital Marketing',
+      date: '2025-09-16',
+      type: 'New'
+    },
     // {
     //   id: 2,
     //   title: 'New Feature: Study Groups',
