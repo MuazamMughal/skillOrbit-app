@@ -5,52 +5,66 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FiTarget, FiAward, FiHeart, FiArrowRight } from 'react-icons/fi';
+import abdulWaheed from '../../../public/content/abdulwaheed.jpg';
+import muazamMughal from '../../../public/content/muazamz.png';
 
 const AboutPage = () => {
   const teamMembers = [
     {
-      name: 'Alex Johnson',
+      name: 'Abdul Waheed',
       role: 'CEO & Founder',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
-      bio: 'Visionary leader with 15+ years of experience in the tech industry.'
+      image: abdulWaheed,
+      bio: 'Visionary leader, passionate about technology and Teaching.'
     },
     {
-      name: 'Sarah Williams',
-      role: 'CTO',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80',
-      bio: 'Tech enthusiast and problem solver with a passion for innovation.'
+      name: 'Ahmad Ali',
+      role: 'Senior Graphic Designer',
+      image: '',
+      bio: ' 5+ years in graphic design, 2000+ Fiverr orders, top-rated seller, and experienced in branding for startups & international firms.'
     },
     {
-      name: 'Michael Chen',
+      name: 'Muazam Mughal',
       role: 'Lead Developer',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+      image: muazamMughal,
       bio: 'Full-stack developer with expertise in modern web technologies.'
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'UX/UI Designer',
+      name: 'Muhammad Muneeb Javed',
+      role: 'Digital Marketing Specialist',
       image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
-      bio: 'Creative designer focused on delivering exceptional user experiences.'
-    }
+      bio: ' Industry professional with real campaign experience, expert in Meta Ads, Instagram Growth & Strategic Branding.'
+    },
+    {
+      name: 'Asad',
+      role: ' Crypto & Trading Instructor',
+      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+      bio: ' 9+ years of hands-on halal crypto trading and blockchain knowledge, guiding students in secure and smart investing.'
+    },
+    {
+      name: 'Umar Jameel ',
+      role: ' Executive Coordinator',
+      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+      bio: ' Executive Coordinator | 2+ years of experience in coordinating and managing projects, ensuring smooth operations and successful outcomes.'
+    },
+
   ];
 
   const values = [
     {
       icon: <FiTarget className="w-8 h-8 text-blue-600" />,
       title: 'Our Mission',
-      description: 'To empower businesses through innovative technology solutions that drive growth and success.'
+      description: ' To build a skillful society that can compete globally while upholding ethics and professionalism.'
     },
     {
       icon: <FiAward className="w-8 h-8 text-blue-600" />,
       title: 'Our Vision',
-      description: 'To be the most trusted partner for digital transformation in the industry.'
+      description: 'To provide affordable, hands-on IT training that prepares students for freelancing, jobs, and entrepreneurship — while connecting top performers with real projects and businesses.'
     },
     {
       icon: <FiHeart className="w-8 h-8 text-blue-600" />,
       title: 'Our Values',
-      description: 'Integrity, innovation, and customer satisfaction are at the core of everything we do.'
-    }
-  ];
+      description: '* Build Sahiwal’s most trusted IT hub and expand nationwide <br> * Provide free career counseling to guide students into the right fields <br> * Ensure no talented student misses opportunities due to fee barriers <br> * Develop SkillOrbit into a future-ready IT agency + software house'}
+];
 
   return (
     <div className="min-h-screen mt-6">
@@ -72,8 +86,9 @@ const AboutPage = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">About Us</h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Empowering businesses through innovative technology solutions and exceptional service.
+            <p className="text-xl md:text-2xl text-blue-100 max-w-6xl mx-auto">
+            SkillOrbit is more than an IT training center — its a mission to empower individuals with practical skills, career counseling, and real opportunities. We provide affordable, market-driven IT courses and professional services that help students, freelancers, and businesses grow with confidence.
+
             </p>
           </motion.div>
         </div>
@@ -83,12 +98,13 @@ const AboutPage = () => {
       <div className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:text-center">
-            <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Our Story</h2>
+            {/* <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Our Story</h2> */}
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               A Passion for Innovation
             </p>
-            <p className="mt-4 max-w-3xl text-xl text-gray-500 lg:mx-auto">
-              Founded in 2020&rsquo; we started as a small team of passionate individuals with a shared vision to revolutionize the tech industry. Today, we&rsquo;re proud to serve clients worldwide with our cutting-edge solutions.
+            <p className="mt-4 max-w-7xl text-xl text-gray-500 lg:mx-auto">
+            At SkillOrbit&rsquo; we believe degrees alone don’t define success — real, practical skills do. That’s why we’ve built a purpose-driven platform where education meets empowerment. Our mission is to make IT skills accessible, affordable, and impactful for everyone.
+
             </p>
           </div>
 
@@ -120,6 +136,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
+    
 
       {/* Team Section */}
       <div className=" py-16">
@@ -158,6 +175,101 @@ const AboutPage = () => {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </div>
+
+
+        {/* FAQ Section */}
+        <div className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-extrabold text-[#2554A4] sm:text-4xl">
+              Frequently Asked Questions
+            </h2>
+            <p className="mt-4 text-xl text-[#32325D] max-w-2xl mx-auto">
+              Everything you need to know about our courses and training programs
+            </p>
+          </div>
+          
+          <div className="space-y-6">
+            {/* FAQ Item 1 */}
+            <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-gray-900 flex items-center">
+                  <span className="text-[#32a1da] mr-3">Q1</span>
+                  How much is the fee for courses?
+                </h3>
+                <div className="mt-2 pl-9 text-gray-600">
+                  <p>👉 Each course has an affordable monthly fee starting from 9,500 PKR.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ Item 2 */}
+            <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-gray-900 flex items-center">
+                  <span className="text-[#32a1da] mr-3">Q2</span>
+                  Are classes online or physical?
+                </h3>
+                <div className="mt-2 pl-9 text-gray-600">
+                  <p>👉 Primarily physical for professional environment. Some courses offer online sessions.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ Item 3 */}
+            <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-gray-900 flex items-center">
+                  <span className="text-[#32a1da] mr-3">Q3</span>
+                  Do I get a certificate?
+                </h3>
+                <div className="mt-2 pl-9 text-gray-600">
+                  <p>👉 Yes, SkillOrbit provides certificates upon course completion.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ Item 4 */}
+            <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-gray-900 flex items-center">
+                  <span className="text-[#32a1da] mr-3">Q4</span>
+                  I'm a beginner. Can I still join?
+                </h3>
+                <div className="mt-2 pl-9 text-gray-600">
+                  <p>👉 Absolutely! COMET and Spoken English are designed for beginners.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ Item 5 */}
+            <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-gray-900 flex items-center">
+                  <span className="text-[#32a1da] mr-3">Q5</span>
+                  What if I don't like the course?
+                </h3>
+                <div className="mt-2 pl-9 text-gray-600">
+                  <p>👉 We provide free career counseling and can help you shift to a more suitable field.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ Item 6 */}
+            <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-gray-900 flex items-center">
+                  <span className="text-[#32a1da] mr-3">Q6</span>
+                  Can I work on projects after training?
+                </h3>
+                <div className="mt-2 pl-9 text-gray-600">
+                  <p>👉 Yes, top-performing students will be linked with small projects, in-house tasks, or software house partners.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
