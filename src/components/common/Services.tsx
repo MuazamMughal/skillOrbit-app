@@ -35,13 +35,13 @@ const services = [
      border: 'border-purple-200'
    },
  
-  // {
-  //   icon: <FaPalette className="w-8 h-8 text-pink-600" />,
-  //   title: 'UI/UX Design',
-  //   description: 'Beautiful and intuitive interfaces that enhance user engagement and satisfaction.',
-  //   color: 'from-pink-100 to-pink-50',
-  //   border: 'border-pink-200'
-  // },
+  {
+    icon: <FaPalette className="w-8 h-8 text-[#2554A4]" />,
+    title: 'Brand Identity',
+    description: 'Creating a strong brand identity that resonates with your audience and establishes your brand as a leader in your industry.',
+    color: 'from-[#d0dff8] to-[#d0dff8]',
+    border: 'border-[#d0dff8]'
+  },
 
 ];
 
@@ -101,7 +101,7 @@ const ServiceCard = ({
       </p>
             {/* this is the reference to */}
       <a 
-        href="#" 
+        href="/services" 
         className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors"
       >
         Learn more

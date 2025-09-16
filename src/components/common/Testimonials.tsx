@@ -3,13 +3,15 @@
 import React, { useState, useEffect } from 'react';
 import { FaQuoteLeft, FaStar, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
+import femaleAvatar from '../../../public/content/female.png';
+import maleAvatar from '../../../public/content/male.png';
 
 interface Testimonial {
   id: number;
   name: string;
   role: string;
-  avatar: string;
+  avatar: StaticImageData;
   content: string;
   rating: number;
   course: string;
@@ -18,40 +20,32 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: 'Alex Johnson',
-    role: 'Web Development Student',
-    avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
-    content: 'The web development course completely transformed my career. The hands-on projects and expert guidance helped me land my dream job as a frontend developer within 3 months of completing the course!',
+    name: 'Ayesha',
+    role: 'Digital Marketing Student',
+    avatar: femaleAvatar,
+    content: 'Before SkillOrbit, I only knew theory. Now I’ve run my first campaign and already started freelancing. Affordable & practical!',
     rating: 5,
-    course: 'Full Stack Web Development'
+    course: 'Digital Marketing'
   },
   {
     id: 2,
-    name: 'Sarah Williams',
-    role: 'Data Science Enthusiast',
-    avatar: 'https://randomuser.me/api/portraits/men/44.jpg',
-    content: 'The data science program provided a perfect balance of theory and practical applications. The instructors were always available to help, and the curriculum was up-to-date with industry standards.',
+    name: 'Hassan',
+    role: 'COMET Student',
+    avatar: maleAvatar,
+    content: 'As a beginner, COMET gave me confidence in computers, Office, and AI tools. It feels like my career has just started',
     rating: 5,
-    course: 'Data Science Professional'
+    course: 'COMET'
   },
   {
     id: 3,
-    name: 'Michael Chen',
-    role: 'Mobile App Developer',
-    avatar: 'https://randomuser.me/api/portraits/men/75.jpg',
-    content: 'As a complete beginner, I was nervous about learning to code. But the structured approach and supportive community made the journey enjoyable. I\'ve already published my first app to the App Store!',
+    name: 'Sana',
+    role: ' Spoken English Student',
+    avatar: femaleAvatar,
+    content: 'From being shy to confidently speaking in mock interviews — this course was a game-changer for me.',
     rating: 5,
-    course: 'iOS Development with Swift'
+    course: 'Spoken English'
   },
-  {
-    id: 4,
-    name: 'Emily Rodriguez',
-    role: 'UX/UI Designer',
-    avatar: 'https://randomuser.me/api/portraits/men/68.jpg',
-    content: 'The design courses here are exceptional. The portfolio I built during the program helped me secure multiple freelance clients even before graduation. The career support is unmatched!',
-    rating: 4,
-    course: 'UX/UI Design Masterclass'
-  }
+ 
 ];
 
 const Testimonials = () => {
