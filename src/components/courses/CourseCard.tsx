@@ -9,7 +9,7 @@ interface CourseCardProps {
   image: string;
   duration: string;
   level: string;
-  students: number;
+  students?: number;
   price?: string;
   whatsappLink: string;
 }
@@ -56,8 +56,8 @@ const CourseCard: React.FC<CourseCardProps> = ({
           </span>
           <span className="mx-2">•</span>
           <span>{duration}</span>
-          <span className="mx-2">•</span>
-          <span>{students} students</span>
+          {/* <span className="mx-2">•</span>
+          <span>{students} students</span> */}
         </div>
 
         <h3 className="mb-2 text-xl font-bold text-gray-900">{title}</h3>
