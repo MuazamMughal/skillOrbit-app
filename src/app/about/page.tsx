@@ -237,7 +237,7 @@ const AboutPage = () => {
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 flex items-center">
                   <span className="text-[#32a1da] mr-3">Q4</span>
-                  I'm a beginner. Can I still join?
+                  I&apos;m a beginner. Can I still join?
                 </h3>
                 <div className="mt-2 pl-9 text-gray-600">
                   <p>👉 Absolutely! COMET and Spoken English are designed for beginners.</p>
@@ -250,7 +250,7 @@ const AboutPage = () => {
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 flex items-center">
                   <span className="text-[#32a1da] mr-3">Q5</span>
-                  What if I don't like the course?
+                  What if I don&apos;t like the course?
                 </h3>
                 <div className="mt-2 pl-9 text-gray-600">
                   <p>👉 We provide free career counseling and can help you shift to a more suitable field.</p>

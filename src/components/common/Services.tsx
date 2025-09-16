@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
-import { FaLaptopCode, FaMobileAlt, FaChartLine, FaServer, FaPalette, FaRocket } from 'react-icons/fa';
+import { FaLaptopCode, FaMobileAlt, FaChartLine, FaPalette, FaRocket } from 'react-icons/fa';
 
 const services = [
   {

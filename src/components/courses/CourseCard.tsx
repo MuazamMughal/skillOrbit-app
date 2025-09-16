@@ -20,7 +20,6 @@ const CourseCard: React.FC<CourseCardProps> = ({
   image,
   duration,
   level,
-  students,
   price,
   whatsappLink,
 }) => {
