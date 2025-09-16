@@ -17,44 +17,30 @@ const ServicesPage = () => {
         'Responsive Design',
         'E-commerce Solutions',
         'CMS Integration',
-        'SEO Optimization',
-        'Performance Tuning'
+        'SEO / Performance Optimization',
       ]
     },
     {
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android to engage your customers on the go.',
-      image: 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
-      features: [
-        'iOS & Android Apps',
-        'React Native Development',
-        'UI/UX Design',
-        'API Integration',
-        'App Store Deployment'
-      ]
-    },
-    {
-      title: 'UI/UX Design',
+      title: 'E-commerce Support',
       description: 'Beautiful and intuitive user interfaces designed to enhance user experience and drive engagement.',
       image: 'https://images.unsplash.com/photo-1541462608143-67571c6738dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
       features: [
-        'User Research',
-        'Wireframing & Prototyping',
-        'Visual Design',
-        'Usability Testing',
-        'Design Systems'
+        'Shopify',
+        'TikTok Shop',
+        'Online Store setups',
+        'Analytics',
       ]
     },
     {
-      title: 'Cloud Solutions',
+      title: 'Social Media Management',
       description: 'Scalable cloud infrastructure and services to power your business applications and data.',
       image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80',
       features: [
-        'Cloud Migration',
-        'AWS/Azure/GCP Services',
-        'Serverless Architecture',
-        'DevOps Automation',
-        'Cost Optimization'
+        'Content calendars',
+        'Account setup',
+        'handling',
+        'Analytics',
+        'Content creation',
       ]
     },
     {
@@ -65,35 +51,32 @@ const ServicesPage = () => {
         'SEO & Content Strategy',
         'Social Media Marketing',
         'PPC Advertising',
-        'Email Campaigns',
-        'Analytics & Reporting'
       ]
     },
     {
-      title: 'IT Consulting',
+      title: 'Brand Identity',
       description: 'Expert technology consulting to align your IT strategy with your business objectives.',
       image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
       features: [
-        'Technology Assessment',
-        'Digital Transformation',
-        'IT Infrastructure',
-        'Cybersecurity',
-        'Compliance & Security'
+        'Logos',
+        'Brand Kits',
+        'Graphic Design',
+        "Business cards"
       ]
     }
   ];
 
   const stats = [
-    { id: 1, name: 'Projects Completed', value: '500+', icon: FiCheckCircle },
-    { id: 2, name: 'Years Experience', value: '8+', icon: FiClock },
-    { id: 3, name: 'Happy Clients', value: '200+', icon: FiUsers },
-    { id: 4, name: 'Awards Won', value: '25+', icon: FiAward },
+    { id: 1, name: 'Projects Completed', value: '5+', icon: FiCheckCircle },
+    { id: 2, name: 'Years Experience', value: '2+', icon: FiClock },
+    { id: 3, name: 'Happy Clients', value: '20+', icon: FiUsers },
+    { id: 4, name: 'Awards Won', value: '2+', icon: FiAward },
   ];
 
   return (
     <div className="min-h-screen mt-6 ">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-t from-blue-300 to-blue-500 text-white overflow-hidden">
+      <div className="relative bg-gradient-to-b from-[#32a1da] to-[#2554A4] text-white overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
@@ -112,7 +95,7 @@ const ServicesPage = () => {
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Our Services</h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Empowering your business with cutting-edge technology solutions tailored to your needs
+            Along with training&rsquo; SkillOrbit also empowers businesses through its IT Agency services. Our agency helps startups and businesses grow from <span className="font-bold text-white">local presence to global recognition</span>
             </p>
           </motion.div>
         </div>
@@ -146,10 +129,10 @@ const ServicesPage = () => {
       <div className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-extrabold text-[#2554A4] sm:text-4xl">
               Our Comprehensive Services
             </h2>
-            <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="mt-4 text-xl text-[#32325D] max-w-3xl mx-auto">
               We offer a wide range of professional services to help your business grow in the digital world.
             </p>
           </div>
@@ -170,7 +153,7 @@ const ServicesPage = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-t from-blue-300 to-blue-500">
+      <div className="bg-gradient-to-b from-[#32a1da] to-[#2554A4]">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
@@ -181,8 +164,8 @@ const ServicesPage = () => {
             </p>
             <div className="mt-8">
               <a
-                href="/contact"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50 transition-colors duration-300"
+                href="https://wa.me/+923334834116" target="_blank"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-100 ease-in-out transition-transform duration-300"
               >
                 Get Started
                 <svg

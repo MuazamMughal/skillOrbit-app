@@ -121,7 +121,7 @@ const Navbar = () => {
             </Link>
             <div className="pt-4 pb-3 border-t border-gray-200">
               <div className="mt-3 space-y-1">
-                <Link href="/contact" className="block w-full px-4 py-2 text-base font-medium text-center text-white bg-indigo-600 hover:bg-indigo-700 rounded-md">
+                <Link href="https://wa.me/+923334834116" target="_blank" className="block w-full px-4 py-2 text-base font-medium text-center text-white bg-indigo-600 hover:bg-indigo-700 rounded-md">
                   Contact Us
                 </Link>
               </div>

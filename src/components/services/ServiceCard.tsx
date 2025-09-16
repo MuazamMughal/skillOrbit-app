@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 interface ServiceCardProps {
   title: string;
@@ -53,10 +54,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             </li>
           ))}
         </ul>
+        <Link href="https://wa.me/+923334834116" target="_blank" >
         
-        <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300">
+        <button className="w-full bg-[#32A1DA] hover:bg-[#2554A4] text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300">
           Learn More
         </button>
+        </Link>
       </div>
     </motion.div>
   );
