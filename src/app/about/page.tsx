@@ -69,7 +69,7 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen mt-6">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-b from-blue-500 to-blue-300 text-white overflow-hidden">
+      <div className="relative bg-gradient-to-b from-[#32a1da] to-[#2554A4] text-white overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
@@ -275,7 +275,7 @@ const AboutPage = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-t from-blue-300 to-blue-500">
+      <div className="bg-gradient-to-b from-[#32a1da] to-[#2554A4]">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
             <span className="block">Ready to start your next project?</span>

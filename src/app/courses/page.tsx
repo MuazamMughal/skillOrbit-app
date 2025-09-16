@@ -114,10 +114,10 @@ const CoursesPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="bg-gradient-to-b from-[#6bc7f5] via-blue-50 to-[#32a1da] text-[#2554A4]  py-20 mt-6">
+      <div className="bg-gradient-to-b from-[#32a1da] to-[#2554A4] opacity-90 text-[white]  py-20 mt-6">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Find Your Perfect Course</h1>
-          <p className="text-xl text-[#2554A4] max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-[white] max-w-3xl mx-auto mb-8">
             Browse our wide range of professional courses and start your learning journey today
           </p>
           
@@ -127,11 +127,11 @@ const CoursesPage = () => {
               <input
                 type="text"
                 placeholder="Search courses..."
-                className="w-full py-4 px-6 pr-12 rounded-lg border-2 border-[#2554A4] text-[#2554A4] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full py-4 px-6 pr-12 rounded-lg border-2 border-[white] text-[white] focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
-              <FiSearch className="absolute right-4 top-1/2 transform -translate-y-1/2 text-[#2554A4] text-xl" />
+              <FiSearch className="absolute right-4 top-1/2 transform -translate-y-1/2 text-[white] text-xl" />
             </div>
           </div>
         </div>
