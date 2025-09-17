@@ -110,18 +110,35 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb- text-center items-center sm:px-3">
-            <Link href="/courses" className="block px-3 py-2 rounded-md text-base font-medium text-[#32A1DA] hover:text-indigo-600 hover:bg-gray-50">
+            <Link 
+              href="/courses" 
+              onClick={() => { setIsOpen(false); handleLinkClick('courses'); }}
+              className="block px-3 py-2 rounded-md text-base font-medium text-[#32A1DA] hover:text-[#2554A4] hover:bg-gray-50"
+            >
               Courses
             </Link>
-            <Link href="/services" className="block px-3 py-2 rounded-md text-base font-medium text-[#32A1DA] hover:text-indigo-600 hover:bg-gray-50">
+            <Link 
+              href="/services" 
+              onClick={() => { setIsOpen(false); handleLinkClick('services'); }}
+              className="block px-3 py-2 rounded-md text-base font-medium text-[#32A1DA] hover:text-[#2554A4] hover:bg-gray-50"
+            >
               Services
             </Link>
-            <Link href="/about" className="block px-3 py-2 rounded-md text-base font-medium text-[#32A1DA] hover:text-indigo-600 hover:bg-gray-50">
+            <Link 
+              href="/about" 
+              onClick={() => { setIsOpen(false); handleLinkClick('about'); }}
+              className="block px-3 py-2 rounded-md text-base font-medium text-[#32A1DA] hover:text-[#2554A4] hover:bg-gray-50"
+            >
               About Us
             </Link>
             <div className="pt-4 pb-3 border-t border-gray-200">
               <div className="mt-3 space-y-1">
-                <Link href="https://wa.me/+923334834116" target="_blank" className="block w-full px-4 py-2 text-base font-medium text-center text-white bg-indigo-600 hover:bg-indigo-700 rounded-md">
+                <Link 
+                  href="https://wa.me/+923334834116" 
+                  target="_blank" 
+                  onClick={() => setIsOpen(false)}
+                  className="block w-full px-4 py-2 text-base font-medium text-center text-white bg-[#2554A4] hover:bg-[#32A1DA] rounded-md"
+                >
                   Contact Us
                 </Link>
               </div>

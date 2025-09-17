@@ -52,6 +52,11 @@ const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [expandedTestimonial, setExpandedTestimonial] = useState<number | null>(null);
+
+  const toggleExpand = (id: number) => {
+    setExpandedTestimonial(expandedTestimonial === id ? null : id);
+  };
 
   const nextSlide = () => {
     setDirection(1);
@@ -114,7 +119,7 @@ const Testimonials = () => {
 
         <div className="relative max-w-5xl mx-auto">
           <div 
-            className="relative overflow-hidden min-h-[400px]"
+            className="relative overflow-hidden min-h-[500px] sm:min-h-[400px]"
             onMouseEnter={() => setIsAutoPlaying(false)}
             onMouseLeave={() => setIsAutoPlaying(true)}
           >
@@ -178,9 +183,23 @@ const Testimonials = () => {
                     <div className="md:w-2/3 flex items-center">
                       <div className="relative">
                         <FaQuoteLeft className="text-blue-600 text-5xl absolute -left-7 -top-15" />
-                        <blockquote className="relative z-10 text-lg text-gray-700">
+                        <div className="relative">
+                          <blockquote 
+                            className={`relative z-10 text-lg text-gray-700 transition-all duration-300 ${
+                              expandedTestimonial === testimonials[currentIndex].id 
+                                ? 'max-h-full' 
+                                : 'max-h-32 sm:max-h-24 overflow-hidden'
+                            }`}
+                          >
                           {testimonials[currentIndex].content}
                         </blockquote>
+                          <button 
+                            onClick={() => toggleExpand(testimonials[currentIndex].id)}
+                            className="mt-2 text-blue-600 hover:text-blue-800 text-sm font-medium focus:outline-none"
+                          >
+                            {expandedTestimonial === testimonials[currentIndex].id ? 'Show less' : 'Read more'}
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>

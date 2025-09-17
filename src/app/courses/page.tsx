@@ -205,7 +205,7 @@ const CoursesPage = () => {
 
         {/* Courses Grid */}
         {filteredCourses.length > 0 ? (
-          <div className="grid mx-20 grid-cols-1 bg-transparent md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="mx-4 grid grid-cols-1 gap-6 sm:mx-6 sm:grid-cols-2 lg:mx-auto lg:max-w-7xl lg:grid-cols-3 lg:gap-8">
             {filteredCourses.map((course) => (
               <CourseCard key={course.id} {...course} />
             ))}

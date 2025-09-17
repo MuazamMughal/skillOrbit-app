@@ -7,6 +7,8 @@ import { motion } from 'framer-motion';
 import { FiTarget, FiAward, FiHeart, FiArrowRight } from 'react-icons/fi';
 import abdulWaheed from '../../../public/content/abdulwaheed.jpg';
 import muazamMughal from '../../../public/content/muazamz.png';
+import maleAvatar from '../../../public/content/male.png';
+
 
 const AboutPage = () => {
   const teamMembers = [
@@ -19,7 +21,7 @@ const AboutPage = () => {
     {
       name: 'Ahmad Ali',
       role: 'Senior Graphic Designer',
-      image: '',
+      image: maleAvatar,
       bio: ' 5+ years in graphic design, 2000+ Fiverr orders, top-rated seller, and experienced in branding for startups & international firms.'
     },
     {
@@ -31,19 +33,19 @@ const AboutPage = () => {
     {
       name: 'Muhammad Muneeb Javed',
       role: 'Digital Marketing Specialist',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+      image: maleAvatar,
       bio: ' Industry professional with real campaign experience, expert in Meta Ads, Instagram Growth & Strategic Branding.'
     },
     {
       name: 'Asad',
       role: ' Crypto & Trading Instructor',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+      image: maleAvatar,
       bio: ' 9+ years of hands-on halal crypto trading and blockchain knowledge, guiding students in secure and smart investing.'
     },
     {
       name: 'Umar Jameel ',
       role: ' Executive Coordinator',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+      image: maleAvatar,
       bio: ' Executive Coordinator | 2+ years of experience in coordinating and managing projects, ensuring smooth operations and successful outcomes.'
     },
 
@@ -63,7 +65,7 @@ const AboutPage = () => {
     {
       icon: <FiHeart className="w-8 h-8 text-blue-600" />,
       title: 'Our Values',
-      description: '* Build Sahiwal’s most trusted IT hub and expand nationwide <br> * Provide free career counseling to guide students into the right fields <br> * Ensure no talented student misses opportunities due to fee barriers <br> * Develop SkillOrbit into a future-ready IT agency + software house'}
+      description: 'Build Sahiwal’s most trusted IT hub and expand nationwide, Provide free career counseling to guide students into the right fields, Ensure no talented student misses opportunities due to fee barriers, Develop SkillOrbit into a future-ready IT agency + software house'}
 ];
 
   return (

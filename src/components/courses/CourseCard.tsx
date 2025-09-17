@@ -24,9 +24,9 @@ const CourseCard: React.FC<CourseCardProps> = ({
   whatsappLink,
 }) => {
   return (
-    <div className="group relative overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+    <div className="group relative mx-auto w-full max-w-md overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 sm:max-w-full">
       {/* Course Image */}
-      <div className="relative h-56 w-full overflow-hidden">
+      <div className="relative h-48 w-full overflow-hidden sm:h-56">
         <Image
           src={image}
           alt={title}
@@ -45,7 +45,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
       </div>
 
       {/* Course Content */}
-      <div className="p-6">
+      <div className="p-4 sm:p-6">
         <div className="mb-4 flex items-center text-sm text-gray-600">
           <span className="flex items-center">
             <svg className="mr-1 h-4 w-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -68,7 +68,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg bg-blue-600 px-6 py-2 font-medium text-white transition-colors hover:bg-blue-700"
+            className="whitespace-nowrap rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700 sm:px-6 sm:text-base"
           >
             Enroll Now
           </Link>
