@@ -45,7 +45,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <Link href="/">
-            <Image src="/logo2.png" alt="Logo" width={300} height={58} className="mb-6" />
+            <Image src="/FooterLogo.png" alt="Logo" width={300} height={58} className="mb-6" />
+            
             </Link>
             <p className="text-white">Empowering individuals with in-demand skills for the digital age. Learn from industry experts and accelerate your career.</p>
             <div className="flex space-x-4 pt-2">
