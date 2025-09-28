@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaStar, FaStarHalfAlt, FaRegStar, FaPlay, FaClock, FaUsers, FaGlobe, FaCertificate } from 'react-icons/fa';
+import { FaStar, FaStarHalfAlt, FaRegStar, FaPlay, FaClock, FaUsers, FaGlobe} from 'react-icons/fa';
 import { MdOutlineCategory, MdOutlineSchool } from 'react-icons/md';
 import coursesData from '@/data/course2.json';
 
@@ -193,7 +193,7 @@ const CourseDetails = ({ params }: { params: { id: string } }) => {
           <div className="lg:col-span-2">
             {/* What You'll Learn */}
             <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">What you'll learn</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">What you ll learn</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {course.whatYouWillLearn?.map((item, index) => (
                   <div key={index} className="flex items-start">
@@ -271,7 +271,7 @@ const CourseDetails = ({ params }: { params: { id: string } }) => {
                   </div>
                   <p className="text-gray-600 mt-2">
                     {course.instructor.split(' ')[0]} is a professional with over 8 years of experience in {course.category}. 
-                    They have taught over 10,000 students and received 2,000+ positive reviews.
+                    They have taught over 100 students and received 20+ positive reviews.
                   </p>
                 </div>
               </div>
