@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 interface CourseCardProps {
-  id?: string;
+  id: string;
   title: string;
   description: string;
   image: string;
@@ -15,6 +15,7 @@ interface CourseCardProps {
 }
 
 const CourseCard: React.FC<CourseCardProps> = ({
+  id,
   title,
   description,
   image,
@@ -62,16 +63,24 @@ const CourseCard: React.FC<CourseCardProps> = ({
         <h3 className="mb-2 text-xl font-bold text-gray-900">{title}</h3>
         <p className="mb-4 text-gray-600 line-clamp-2">{description}</p>
         
-        <div className="flex items-center justify-between">
-          <span className="text-xl font-bold text-blue-600">{price}</span>
-          <Link 
-            href={whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="whitespace-nowrap rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700 sm:px-6 sm:text-base"
-          >
-            Enroll Now
-          </Link>
+        <div className="mt-6 flex flex-col space-y-3 sm:flex-row sm:items-center sm:justify-between sm:space-y-0">
+          {price && <span className="text-xl font-bold text-blue-600">{price}</span>}
+          <div className="flex w-full items-center justify-end gap-4 sticky-bottom ">
+            <Link 
+              href={`/courses/${id || '#'}`}
+              className="whitespace-nowrap rounded-lg border border-gray-400 bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700 sm:px-6 sm:text-base"
+            >
+              View Details
+            </Link>
+            <Link 
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whitespace-nowrap rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700 sm:px-6 sm:text-base"
+            >
+              Enroll Now
+            </Link>
+          </div>
         </div>
       </div>
     </div>

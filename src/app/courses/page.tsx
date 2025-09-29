@@ -16,11 +16,12 @@ const CoursesPage = () => {
       title: 'Web Development – From Beginner to Full Stack Developer',
       description: 'This course is designed to transform beginners into job-ready developers. Learn step by step from HTML & CSS to advanced JavaScript, React, Node.js, and MongoDB, building real-world projects along the way.',
       image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80',
-      duration: '6 Months (Weekend Physical Classes – Sat & Sun 2:00pm–5:00pm + 1 Online Session on Weekdays)',
+      duration: '6 Months (Onsite Classes – Sat & Sun 2:00pm–5:00pm + 1 Online Session on Weekdays)',
       level: 'Beginner',
       // students: 1245,
       // price: '$299',
       category: 'Web Development',
+      
       whatsappLink: 'https://wa.me/923334834116?text=I%20want%20to%20enroll%20in%20Web%20Development%20Bootcamp',
     },
     {
